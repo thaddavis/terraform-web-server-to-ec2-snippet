@@ -1,9 +1,5 @@
 # Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
-  access_key = "AKIAU3IOQ6XW66XZAJP2"
-  secret_key = "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"
-}
+provider "aws" {}
 
 # PART 1
 
@@ -190,14 +186,14 @@ resource "aws_instance" "web-server-instance" {
   }
 }
 
-output "server_private_ip" {
-  value = aws_instance.web-server-instance.private_ip
+# output "server_private_ip" {
+#   value = aws_instance.web-server-instance.private_ip
 
-}
+# }
 
-output "server_id" {
-  value = aws_instance.web-server-instance.id
-}
+# output "server_id" {
+#   value = aws_instance.web-server-instance.id
+# }
 
 # PART 3
 

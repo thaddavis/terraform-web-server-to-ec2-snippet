@@ -4,6 +4,10 @@
 
 This is a snippet I collected from the "Terraform Crash Course" by Sanjeev Thiyagarajan
 
+The snippet deploys an Apache web server on an EC2 instance using a Terraform script aka
+
+HashiCorp Configuration Language (HCL).
+
 https://www.youtube.com/watch?v=SLB_c_ayRMo
 
 ## Reference Material
@@ -43,3 +47,5 @@ terraform apply -target aws_instance.web-server-instance
 terraform apply -var "subnet_prefix=10.0.1.0/24"
 
 terraform apply -var-file=terraform.tfvars
+
+aws sts decode-authorization-message --encoded-message <ENCODED_MESSAGE_HERE>
